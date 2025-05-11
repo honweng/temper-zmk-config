@@ -1,0 +1,71 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // 10
+
+#include <input/processors.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+
+#define QWERTY      0
+#define COLEMAKDH   1
+#define QWERTY_TAP  2
+
+#define BASE        QWERTY
+#define EXTRA       COLEMAKDH
+#define TAPL        QWERTY_TAP
+
+#define NUMBER      3
+#define SYMB        4
+#define FUNC        5
+
+#define NAVI        6
+#define MOUSE       7 
+#define MEDIA       8
+
+#define BUTTON      9
+
+
+#include "miryoku/define.h"
+#include "miryoku/combo.h"
+#include "miryoku/combo.dtsi"
+
+
+#include "miryoku/behaviour.h"
+#include "miryoku/behaviour.dtsi"
+
+#include "miryoku/doubletap_guard.dtsi"
+
+#include "miryoku/mouse.h"
+#include "miryoku/mouse.dtsi"
+
+#include "miryoku/shift_function.h"
+#include "miryoku/shift_function.dtsi"
+
+#include "miryoku/clipboard.h"
+
+#define U_NA &none
+#define U_BOOT &u_bootloader
+
+#include "bindings.h"
+#include "key_mapping.h"
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        QWERTY_LAYER
+        COLEMAK_DH_LAYER
+        QWERTY_TAP_LAYER
+        NUMBER_LAYER
+        SYMBOL_LAYER
+        FUNC_LAYER
+        NAVI_LAYER
+        MOUSE_LAYER
+        MEDIA_LAYER
+        BUTTON_LAYER
+    };
+};
