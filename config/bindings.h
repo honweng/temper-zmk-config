@@ -26,7 +26,7 @@ U_LT(BUTTON, Z)    &kp X              &kp C              &kp V              &kp 
 &kp LBRC           &kp AMPS           &kp ASTRK          &kp LPAR           &kp RBRC            U_NA               &u_to_U_BASE       &u_to_U_EXTRA      &u_to_U_TAPL       U_BOOT            \
 &kp COLON          &kp DLLR           &kp PRCNT          &kp CARET          &kp PLUS            U_NA               &kp RCTRL          &kp RSHFT          &kp RALT           &kp RGUI          \
 &kp TILDE          &kp EXCL           &kp AT             &kp HASH           &kp PIPE            U_NA               U_NA               U_NA               U_NA               U_NA              \
-                                      &kp RPAR           &kp RPAR           &kp UNDER           U_NA               U_NA               U_NA          
+                                      &kp LPAR           &kp RPAR           &kp UNDER           U_NA               U_NA               U_NA          
 
 #define FUNC_BINDINGS \
 &kp F12            &kp F7             &kp F8             &kp F9             &kp PSCRN           U_NA               &u_to_U_BASE       &u_to_U_EXTRA      &u_to_U_TAPL       U_BOOT            \
@@ -46,7 +46,7 @@ U_NA               U_NA               U_NA               U_NA               U_NA
                                       U_NA               U_NA               U_NA                U_BTN1             U_BTN2             U_BTN3              
 
 #define MEDIA_BINDINGS \
-U_BOOT             &u_to_U_TAPL       &u_to_U_EXTRA      &u_to_U_BASE       U_NA                U_NA               U_NA               U_NA               U_NA               U_NA              \
+U_BOOT             &u_to_U_TAPL       &u_to_U_EXTRA      &u_to_U_BASE       U_NA                U_RDO              U_PST              U_CPY              U_CUT              U_UND              \
 &kp LGUI           &kp LALT           &kp LSHFT          &kp LCTRL          U_NA                U_EP_TOG           &kp C_PREV         &kp C_VOL_DN       &kp C_VOL_UP       &kp C_NEXT        \
 U_NA               U_NA               U_NA               U_NA               U_NA                &u_out_tog         &u_bt_sel_0        &u_bt_sel_1        &u_bt_sel_2        &u_bt_sel_3       \
                                       U_NA               U_NA               U_NA                &kp C_STOP         &kp C_PP           &kp C_MUTE              

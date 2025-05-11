@@ -11,6 +11,7 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,battery = &vbatt;
     };
 
     default_transform: keymap_transform_0 {
@@ -31,6 +32,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
         label = "KSCAN";
 
         diode-direction = "col2row";
@@ -41,6 +43,11 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
             , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
+    };
+
+    vbatt: vbatt {
+       compatible = "zmk,battery-nrf-vddh";
+       init-delay-ms = <50>;
     };
 
     // TODO: per-key RGB node(s)?
@@ -65,3 +72,4 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         prechargep = <0x22>;
     };
 };
+
