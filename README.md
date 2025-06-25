@@ -3,8 +3,7 @@
 This is my personal ZMK config for the [temper](https://github.com/raeedcho/temper).
 
 Some notes about this config:
-- Four main layers (default, numbers/symbols, navigation, and function)
+- Based on the Miryoku layout
 - Default layer is Colemak DHm, but there's also a QWERTY layer that can be toggled on
-- Navigation layer has vim-like arrow keys
 
-![Temper Keymap](keymap_img/temper.svg)
+![Temper Keymap](keymap_drawer/temper.svg)
